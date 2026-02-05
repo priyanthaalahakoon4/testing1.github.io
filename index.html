@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexaX • Crypto Exchange</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+
+  <header class="topbar glass">
+    <div class="brand">
+      <span class="brand-logo">◈</span>
+      <div>
+        <h1>NexaX</h1>
+        <p>Advanced Exchange</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#">Markets</a>
+      <a href="#">Trade</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Earn</a>
+    </nav>
+    <button class="pill">Connect Wallet</button>
+  </header>
+
+  <main class="layout">
+    <section class="card hero glass">
+      <h2>Trade Smarter,<br/>Faster, Global.</h2>
+      <p>Institutional-grade tools with live analytics, deep liquidity, and lightning execution.</p>
+      <div class="hero-actions">
+        <button class="btn-primary">Start Trading</button>
+        <button class="btn-secondary">View Markets</button>
+      </div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="card chart glass">
+      <div class="card-head">
+        <div>
+          <h3>BTC / USDT</h3>
+          <p class="muted">Perpetual · 1H</p>
+        </div>
+        <div class="price-block">
+          <span id="lastPrice">--</span>
+          <small id="priceChange">--</small>
+        </div>
+      </div>
+      <canvas id="priceChart" width="900" height="360"></canvas>
+    </section>
+
+    <section class="card orderbook glass">
+      <div class="card-head"><h3>Order Book</h3><p class="muted">Mock liquidity</p></div>
+      <div class="book-grid">
+        <div>
+          <h4>Asks</h4>
+          <ul id="asks"></ul>
+        </div>
+        <div>
+          <h4>Bids</h4>
+          <ul id="bids"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card markets glass">
+      <div class="card-head"><h3>Top Movers</h3><p class="muted">24h</p></div>
+      <table>
+        <thead>
+          <tr><th>Pair</th><th>Price</th><th>24h</th><th>Volume</th></tr>
+        </thead>
+        <tbody id="marketRows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
